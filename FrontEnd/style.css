@@ -1,7 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFFFF;
+    color: #333333;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 nav {
+    width: 100%;
+    min-height: 62px;
+    background-color: #004A9D;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    gap: 35px;
+}
+
+nav h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-right: auto;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #004A9D;
+    margin: 25px 0 10px;
+}
+
+.Produtos {
+    width: 100%;
+    background-color: #CCCCCC;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 9px;
+    padding: 22px 7%;
+}
+
+.produto {
+    flex: 1;
+    min-width: 0;
     background-color: #EEEEEE;
+    border-radius: 9px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.produto img {
+    width: 100%;
+    height: 98px;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    background-color: #333333;
+    padding: 10px;
+}
+
+.produto > p {
+    margin: 10px 11px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.produto > p:nth-of-type(2) {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.preco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 11px 0;
+}
+
+.preco p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.preco button {
+    background-color: #004A9D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.preco button:hover {
+    background-color: #00366F;
+}
+
+.e-mail {
+    width: 86%;
+    background-color: #EEEEEE;
+    margin: 13px auto 22px;
+    padding: 20px 17px 15px;
+}
+
+.e-mail h1 {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 700;
+    color: #004A9D;
+    margin-bottom: 10px;
+}
+
+.e-mail input {
+    width: 70%;
+    height: 32px;
+    padding: 5px 8px;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.e-mail input:focus {
+    border-color: #004A9D;
+}
+
+.e-mail button {
+    width: 20%;
+    height: 32px;
+    margin-left: 12px;
+    background-color: #004A9D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.e-mail button:hover {
+    background-color: #00366F;
 }
 
 footer {
+    width: 100%;
+    min-height: 50px;
+    flex-shrink: 0;
     background-color: #333333;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: auto;
+}
+
+@media (max-width: 520px) {
+
+    .Produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 100%;
+    }
+
+    nav {
+        padding: 0 5%;
+        gap: 15px;
+    }
+
+    nav h3 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .e-mail {
+        width: 90%;
+    }
+
+    .e-mail h1 {
+        font-size: 23px;
+    }
+
+    .e-mail input {
+        width: 65%;
+    }
+
+    .e-mail button {
+        width: 28%;
+        margin-left: 5px;
+    }
 }
